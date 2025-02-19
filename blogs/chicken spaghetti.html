@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rudraksha FooddyBlog</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+
+    <style>
+        body {
+            margin-top: 20px;
+        }
+
+
+        .content-item {
+            padding: 30px 0;
+            background-color: #FFFFFF;
+        }
+
+        .content-item.grey {
+            background-color: #F0F0F0;
+            padding: 50px 0;
+            height: 100%;
+        }
+
+        .content-item h2 {
+            font-weight: 700;
+            font-size: 25px;
+            line-height: 45px;
+            text-transform: uppercase;
+            margin: 20px 0;
+        }
+
+        .content-item h3 {
+            font-weight: 400;
+            font-size: 20px;
+            color: #555555;
+            margin: 10px 0 15px;
+            padding: 0;
+        }
+
+        .content-headline {
+            height: 1px;
+            text-align: center;
+            margin: 20px 0 70px;
+        }
+
+        .content-headline h2 {
+            background-color: #FFFFFF;
+            display: inline-block;
+            margin: -20px auto 0;
+            padding: 0 20px;
+        }
+
+        .grey .content-headline h2 {
+            background-color: #F0F0F0;
+        }
+
+        .content-headline h3 {
+            font-size: 14px;
+            color: #AAAAAA;
+            display: block;
+        }
+
+        .box {
+            background-color: #FFFFFF;
+            padding: 10px 20px;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .box h3 {
+            margin: 30px 0 5px;
+            font-weight: bold;
+        }
+
+        .box ul {
+            margin: 0;
+        }
+
+        .box ul li {
+            font-size: 13px;
+            border-bottom: 1px dashed #DDDDDD;
+            padding: 10px 0;
+            font-weight: 600;
+        }
+
+        .box ul li:last-child {
+            border-bottom: 0;
+        }
+
+        .box ul li i {
+            font-size: 18px;
+            margin-right: 20px;
+        }
+
+        .box.categories ul li i {
+            color: #BBBBBB;
+            position: relative;
+            top: 2px;
+            width: 20px;
+        }
+
+        .posts ul li a {
+            font-size: 11px;
+            line-height: 23px;
+        }
+
+        .posts ul li a:hover {
+            color: #333333;
+        }
+
+        .posts ul li div {
+            font-size: 13px;
+            color: #999999;
+            font-weight: bold;
+            text-align: right;
+            margin-top: 5px;
+        }
+
+        .box.posts ul li i {
+            color: #333333;
+            font-size: 14px;
+            margin-right: 10px;
+        }
+
+        .box.tags ul.blog-tags li {
+            border: 0;
+        }
+
+        ul.blog-tags li {
+            padding: 7px 0;
+        }
+
+        div ul.blog-tags li i,
+        div .box.tags ul li i {
+            color: #FFFFFF;
+            position: relative;
+            top: 1px;
+            font-size: 14px;
+        }
+
+        .blog p img.pull-left {
+            margin-right: 15px;
+        }
+
+        .blog p img {
+            max-width: 300px;
+            border: 3px solid #BBBBBB;
+            padding: 5px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header class="bg-dark fixed-top">
+        <nav class="container-xxl navbar navbar-expand-lg py-3 bg-dark navbar-dark">
+            <div class="container-fluid">
+                </button>
+                <div class="mx-auto">
+                    <a class="navbar-brand text-white" href="../index.html"><img src="../images/Logo.png"
+                            alt="fooddy blog" height="45px" width="200px"></a>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item mx-3">
+                            <a class="nav-link fw-bold" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item mx-3">
+                            <a class="nav-link fw-bold" href="../index.html #blog">Blog</a>
+                        </li>
+                        <li class="nav-item mx-3">
+                            <a class="nav-link fw-bold" href="../contact.html">CONTACT</a>
+                        </li>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <br><br>
+    <section class="content-item grey pb-10" id="blog-item">
+        <div class="container">
+            <div class="row">
+                <!-- BLOG POST - START -->
+                <div class="col-sm-8 blog">
+                    <h2>One Pot Chicken Spaghetti</h2>
+                    <ul class="blog-detail list-unstyled list-inline">
+                        <li><i class="fa fa-calendar"></i>16/01/2025</li>
+                        <li><i class="fa fa-clock"></i>16:45</li>
+                        <li><i class="fa fa-comments"></i>58 Comments</li>
+                    </ul>
+                    <p><img class="img-responsive pull-left" src="../images/chicken-spaghetti.jpeg" alt=""><b
+                            class="front-img">What is Hainanese chicken rice?
+                        </b><br> Hainanese chicken is deceptively simple but somehow complex. It originated in Hainan in
+                        Southern China, but its spiritual home is Singapore, where you'll find renditions of the ever
+                        popular dish everywhere, from hawker stands to high end hotels.
+                        I would fight to the death to say that Hainanese chicken rice is the best rendition of chicken
+                        and rice out there. It's so humble, so flavorful, and so pure. At its heart, Hainanese chicken
+                        rice is just that: chicken and rice.
+                        The chicken is poached in a simple yet flavorful broth scented with ginger, garlic, and
+                        scallions and is silky, firm, and tastes like the most perfect chicken you'll ever have. The
+                        rice that comes with it should stand on its own: full of chicken flavor, slicked with fat,
+                        savory, and fragrant.</p>
+                    <ul>
+                        <li>chinese food recipes</li>
+                        <li>chicken thigh</li>
+                        <li>comfort</li>
+                        <li>easy</li>
+                    </ul>
+                    <p>There are a lot of Hainanese chicken rice recipes that call for 24 hour (or more) cures and other
+                        very complicated steps. It doesn’t need to be this way, especially if you just want good chicken
+                        rice and you’re not competing with a dozen other chicken rice hawkers at a market. It’s the rice
+                        that you need to pay careful attention to, and that’s an easy thing that doesn’t take much extra
+                        time.</p>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="sidebar">
+                        <h3>Latest Posts</h3>
+                        <div class="box posts">
+                            <ul class="list-unstyled">
+                                <li><i class="fa fa-chevron-right"></i><a href="./sesame.html">One Pan Sesame
+                                        Chicken</a>
+                                    <div>10/02/2025</div>
+                                </li>
+                                <li><i class="fa fa-chevron-right"></i><a href="./Hainanese Chicken Rice.html">Hainanese
+                                        Chicken Rice</a>
+                                    <div>25/01/2025</div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <h3>Previous Posts</h3>
+                        <div class="box posts">
+                            <ul class="list-unstyled">
+                                <li><i class="fa fa-chevron-right"></i><a href="./cloud bread.html">TikTok cloud bread</a>
+                                    <div>25/01/2025</div>
+                                </li>
+                                <li><i class="fa fa-chevron-right"></i><a href="./Chocolate Bombs.html">Coziest Homemade Hot Chocolate Bombs
+                                </a>
+                                    <div>23/01/2025</div>
+                                </li>
+                                <li><i class="fa fa-chevron-right"></i><a href="./Chocolate Mug Cake.html">Chocolate Mug Cake
+                                </a>
+                                    <div>21/01/2025</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

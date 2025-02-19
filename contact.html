@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - Rudraksha FooddyBlog</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+    <style>
+        body,
+        html {
+            height: 100vh;
+            margin: 0;
+            background: #121212;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .contact-section {
+            width: 95%;
+            max-width: 1300px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px;
+        }
+
+        .box {
+            width: 48%;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            text-align: center;
+        }
+
+        .social-icons a {
+            margin: 10px;
+            color: white;
+            font-size: 24px;
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            max-width: 550px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .message {
+            color: rgba(0, 0, 0, 0.822);
+            font-size: 14px;
+        }
+
+        .flex {
+            display: flex;
+            width: 100%;
+            gap: 6px;
+        }
+
+        .form label {
+            position: relative;
+        }
+
+        .form label .input {
+            width: 100%;
+            padding: 10px 10px 20px 10px;
+            outline: 0;
+            border: 1px solid rgba(105, 105, 105, 0.397);
+            border-radius: 5px;
+        }
+
+        .form label .input+span {
+            position: absolute;
+            left: 10px;
+            top: 15px;
+            color: rgb(0, 0, 0);
+            font-size: 0.9em;
+            cursor: text;
+            transition: 0.3s ease;
+        }
+
+        .form label .input:placeholder-shown+span {
+            top: 15px;
+            font-size: 0.9em;
+        }
+
+        .form label .input:focus+span,
+        .form label .input:valid+span {
+            top: 30px;
+            font-size: 0.7em;
+            font-weight: 600;
+        }
+
+        .form label .input:valid+span {
+            color: green;
+        }
+
+        .input01 {
+            width: 100%;
+            padding: 10px 10px 20px 10px;
+            outline: 0;
+            border: 1px solid rgba(105, 105, 105, 0.397);
+            border-radius: 5px;
+        }
+
+        .form label .input01+span {
+            position: absolute;
+            left: 10px;
+            top: 50px;
+            color: rgb(0, 0, 0);
+            font-size: 0.9em;
+            cursor: text;
+            transition: 0.3s ease;
+        }
+
+        .form label .input01:placeholder-shown+span {
+            top: 40px;
+            font-size: 0.9em;
+        }
+
+        .form label .input01:focus+span,
+        .form label .input01:valid+span {
+            top: 50px;
+            font-size: 0.7em;
+            font-weight: 600;
+        }
+
+        .form label .input01:valid+span {
+            color: green;
+        }
+
+        .fancy {
+            background-color: transparent;
+            border: 2px solid #cacaca;
+            border-radius: 0px;
+            box-sizing: border-box;
+            color: #fff;
+            cursor: pointer;
+            display: inline-block;
+            font-weight: 390;
+            letter-spacing: 2px;
+            margin: 0;
+            outline: none;
+            overflow: visible;
+            padding: 8px 30px;
+            position: relative;
+            text-align: center;
+            text-decoration: none;
+            text-transform: none;
+            transition: all 0.3s ease-in-out;
+            user-select: none;
+            font-size: 13px;
+        }
+
+        .fancy::before {
+            content: " ";
+            width: 1.7rem;
+            height: 2px;
+            background: #000000;
+            top: 50%;
+            left: 1.5em;
+            position: absolute;
+            transform: translateY(-50%);
+            transform: translateX(230%);
+            transform-origin: center;
+            transition: background 0.3s linear, width 0.3s linear;
+        }
+
+        .fancy .text {
+            font-size: 1.125em;
+            line-height: 1.33333em;
+            padding-left: 2em;
+            display: block;
+            text-align: left;
+            transition: all 0.3s ease-in-out;
+            text-transform: lowercase;
+            text-decoration: none;
+            color: #000000;
+            transform: translateX(30%);
+        }
+
+        .fancy .top-key {
+            height: 2px;
+            width: 1.5625rem;
+            top: -2px;
+            left: 0.625rem;
+            position: absolute;
+            background: white;
+            transition: width 0.5s ease-out, left 0.3s ease-out;
+        }
+
+        .fancy .bottom-key-1 {
+            height: 2px;
+            width: 1.5625rem;
+            right: 1.875rem;
+            bottom: -2px;
+            position: absolute;
+            background: white;
+            transition: width 0.5s ease-out, right 0.3s ease-out;
+        }
+
+        .fancy .bottom-key-2 {
+            height: 2px;
+            width: 0.625rem;
+            right: 0.625rem;
+            bottom: -2px;
+            position: absolute;
+            background: white;
+            transition: width 0.5s ease-out, right 0.3s ease-out;
+        }
+
+        .fancy:hover {
+            color: white;
+            background: #858383;
+        }
+
+        .fancy:hover::before {
+            width: 1.5rem;
+            background: white;
+        }
+
+        .fancy:hover .text {
+            color: white;
+            padding-left: 1.5em;
+        }
+
+        .fancy:hover .top-key {
+            left: -2px;
+            width: 0px;
+        }
+
+        .fancy:hover .bottom-key-1,
+        .fancy:hover .bottom-key-2 {
+            right: 0;
+            width: 0;
+        }
+
+        .social-icons a {
+            margin: 10px;
+            color: white;
+            font-size: 24px;
+            transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.2) translateY(-5px);
+            color: #ffffff;
+        }
+
+        .social-icons a:nth-child(1) {
+            color: #3b5998;
+        }
+
+        .social-icons a:nth-child(2) {
+            color: #00acee;
+        }
+
+        .social-icons a:nth-child(3) {
+            color: #e4405f;
+        }
+
+        .social-icons a:nth-child(4) {
+            color: #0e76a8;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="bg-dark fixed-top">
+        <nav class="container-xxl navbar navbar-expand-lg py-3 bg-dark navbar-dark">
+            <div class="container-fluid">
+                </button>
+                <div class="mx-auto">
+                    <a class="navbar-brand text-white" href="index.html"><img src="images/Logo.png" alt="fooddy blog"
+                            height="45px" width="200px"></a>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item mx-3">
+                            <a class="nav-link fw-bold" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item mx-3">
+                            <a class="nav-link fw-bold" href="index.html #blog">Blog</a>
+                        </li>
+                        <li class="nav-item mx-3">
+                            <a class="nav-link fw-bold" href="contact.html">CONTACT</a>
+                        </li>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container mt-5 pt-5 text-center">
+        <h2>Contact Us</h2>
+    </div>
+
+    <div class="contact-section">
+        <div class="box">
+            <p><i class="fas fa-envelope"></i> Email: foodyblogger@gmail.com</p>
+            <p><i class="fas fa-phone"></i> Phone: +91 7208817227</p>
+            <p><i class="fas fa-map-marker-alt"></i> Address: Andheri, Mumbai, India.</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/profile.php?id=100075682933834" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://x.com/Rudraksha_Nakti" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/rudrakshx___/?next=%2F" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/rudraksha-d-nakti-94089b27a/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="box">
+            <form class="form">
+
+                <div class="flex">
+                    <label>
+                        <input required="" placeholder="" type="text" class="input">
+                        <span>first name</span>
+                    </label>
+
+                    <label>
+                        <input required="" placeholder="" type="text" class="input">
+                        <span>last name</span>
+                    </label>
+                </div>
+
+                <label>
+                    <input required="" placeholder="" type="email" class="input">
+                    <span>email</span>
+                </label>
+
+                <label>
+                    <input required="" type="tel" placeholder="" class="input">
+                    <span>contact number</span>
+                </label>
+                <label>
+                    <textarea required="" rows="3" placeholder="" class="input01"></textarea>
+                    <span>message</span>
+                </label>
+
+                <button class="fancy" href="#">
+                    <span class="top-key"></span>
+                    <span class="text">submit</span>
+                    <span class="bottom-key-1"></span>
+                    <span class="bottom-key-2"></span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
